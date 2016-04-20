@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugins>
+  <Others>
+      <NavUpdate>1</NavUpdate>
+  </Others>
+ 
+  <Users>
+       <User>
+          <id>1001</id>
+          <label>matrix</label>
+          <channel>matrix</channel>
+          <class>com.gameworks.sdk.standard.core.SDKKitCore</class>
+          <instance>getInstance</instance>
+          <needInit>true</needInit>
+          <needApplication>true</needApplication>
+          <needLifeCycle>true</needLifeCycle>
+          <initName>init</initName>
+          <method>login</method>
+      </User>
+
+  </Users>
+  <Pays>
+      <Pay>
+          <id>1002</id>
+          <label>standard_pay</label>
+          <channel>matrix</channel>
+          <class>com.gameworks.sdk.standard.core.SDKKitCore</class>
+          <instance>getInstance</instance>
+          <needLifeCycle>false</needLifeCycle>
+          <needInit>false</needInit>
+          <initName>init</initName>
+          <method>pay</method>
+      </Pay>
+  </Pays>
+  <Datas>
+      <Data>
+          <id>1003</id>
+          <label>standard_data</label>
+          <channel>data</channel>
+          <class>com.gameworks.sdk.standard.core.SDKKitStatistic</class>
+          <needInit>true</needInit>
+          <initNeedContext>true</initNeedContext>
+          <initName>init</initName>
+          <instance>getIntance</instance>
+      </Data>
+  </Datas>
+ 
+ <Pushs>
+      <Push>
+           <id>1005</id>
+           <label>standard_push</label>
+          <channel>push</channel>
+          <class>com.gameworks.push.standard.core.SDKPushCore</class>
+          <instance>getInstance</instance>
+          <needInit>true</needInit>
+          <needLifeCycle>false</needLifeCycle>
+          <initName>init</initName>
+          <method>startWork</method>
+      </Push>
+  </Pushs> 
+
+  <Shares>
+      <Share>
+           <id>1006</id>
+          <label>standard_share</label>
+          <channel>share</channel>
+          <class>com.gameworks.share.standard.core.SDKShareCore</class>
+          <instance>getInstance</instance>
+          <needInit>true</needInit>
+          <needLifeCycle>true</needLifeCycle>
+          <initName>init</initName>
+          <method>share</method>
+      </Share>
+  </Shares> 
+</Plugins>
