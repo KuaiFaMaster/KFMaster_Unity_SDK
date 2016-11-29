@@ -136,9 +136,20 @@ namespace Assets
         /// 统计角色升级
         /// </summary>
         /// <param name="level"></param>
-        public void onUpgrade( string level)
+        ///         /// <param name="createTime">
+        ///角色创建时间
+        ///1.需要发uc九游渠道则必传，long类型 时间戳，十位数，特别注意不能取系统当前时间，需要传服务器的角色创建时间，服务端需要保存该值
+        ///详情可查看uc官方要求说明：http://bbs.9game.cn/thread-5370208-1-1.html
+        ///2.不需要上uc九游渠道，则传0L
+        /// </param>
+        /// <param name="upgradeTime">
+        /// 角色升级时间时间
+        ///需要发uc九游渠道则必传，要求与以上
+        ///不需要上uc九游渠道，则传0L
+        /// </param>
+        public void onUpgrade(string level, long createTime, long upgradeTime)
         {
-            CallSdkApi("onUpgrade", level);
+            CallSdkApi("onUpgrade", level, createTime, upgradeTime);
         }
 
         /// <summary>
@@ -148,6 +159,7 @@ namespace Assets
         /// <param name="roleName"></param>
         /// <param name="serverId"></param>
         /// <param name="serverName"></param>
+
         public void onCreateRole(string roleId,string roleName, string serverId, string serverName)
         {
             CallSdkApi("onCreateRole", roleId, serverId, serverName, roleName);
@@ -164,9 +176,20 @@ namespace Assets
         /// <param name="roleLevel"></param>
         /// <param name="serverId"></param>
         /// <param name="serverName"></param>
-        public void onEnterGame(string roleId, string roleName, int roleLevel, string serverId, string serverName)
+        ///         /// <param name="createTime">
+        ///角色创建时间
+        ///1.需要发uc九游渠道则必传，long类型 时间戳，十位数，特别注意不能取系统当前时间，需要传服务器的角色创建时间，服务端需要保存该值
+        ///详情可查看uc官方要求说明：http://bbs.9game.cn/thread-5370208-1-1.html
+        ///2.不需要上uc九游渠道，则传0L
+        /// </param>
+        /// <param name="upgradeTime">
+        /// 角色升级时间时间
+        ///需要发uc九游渠道则必传，要求与以上
+        ///不需要上uc九游渠道，则传0L
+        /// </param>
+        public void onEnterGame(string roleId, string roleName, int roleLevel, string serverId, string serverName,long createTime,  long upgradeTime)
         {
-            CallSdkApi("onEnterGame", roleId, roleLevel, roleName,  serverId, serverName);
+            CallSdkApi("onEnterGame", roleId, roleLevel, roleName,  serverId, serverName, createTime,   upgradeTime);
         
         }
 

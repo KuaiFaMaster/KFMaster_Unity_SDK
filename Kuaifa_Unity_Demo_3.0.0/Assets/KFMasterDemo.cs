@@ -145,7 +145,7 @@ namespace Assets
                 string roleId = "121";//角色唯一标识
                 string roleName = "武士";//角色名称
                 int roleLevel = 3;//玩家等级 
-                HJRSDKKitUnityCore.Instance.onEnterGame(roleId, roleName, roleLevel, serverId, serverName);
+                HJRSDKKitUnityCore.Instance.onEnterGame(roleId, roleName, roleLevel, serverId, serverName,0L,0L);
             }
             //
             //玩家升级，在玩家升级时调用。需要实时调用
@@ -153,7 +153,7 @@ namespace Assets
             {
 
                 string level = "10";//玩家等级 ,不能传中文
-                HJRSDKKitUnityCore.Instance.onUpgrade( level);
+                HJRSDKKitUnityCore.Instance.onUpgrade(level, 0L, 0L);
             }
 
             
